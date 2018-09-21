@@ -1,0 +1,60 @@
+<!-- o content-header  (contentHeader) foi componentizado -->
+<content-header name="Dashboard" small="Versão 1.0"></content-header>
+<!-- os componentes valueBox, declarados no valueBox.js com cammel case e precisam serem
+chamado aqui com <value-box> -->
+
+<!-- a seção abaixo está sendo controlada pelo DashboardController (ng-controller="DashboardCtrl as dashboard)
+está sendo usado em ng-controller="DashboardCtrl as dashboard", é para usar conforme o padrão do john papa
+evitando usar funções em escopo glogal dentro do dashboardController
+-->
+
+<section class="content" ng-controller="DashboardCtrl as dashboard">
+  <value-box grid="4" color-class="bg-green" icon-class="fa fa-bank"
+  value="R$ {{ dashboard.credit | number: 2 }}" text="Total de Créditos"></value-box>
+  <value-box grid="4" color-class="bg-red" icon-class="fa fa-credit-card"
+  value="R$ {{ dashboard.debt | number: 2 }}" text="Total de Débitos"></value-box>
+  <value-box grid="4" color-class="bg-blue" icon-class="fa fa-money"
+  value="R$ {{ dashboard.total | number: 2 }}" text="Valor Consolidado"></value-box>
+</section>
+
+<!--
+<section class="content-header">
+  <h1>Dashboard <small>Versão 1.0</small></h1>
+</section>
+
+<section class="content">
+  <div class="col-xs-4">
+    <div class="small-box bg-green">
+      <div class="inner">
+        <h3>R$ 10.00</h3>
+        <p>Total de Créditos</p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-bank"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="small-box bg-blue">
+      <div class="inner">
+        <h3>R$ 10.00</h3>
+        <p>Valor Consolidado</p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-money"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="small-box bg-green">
+      <div class="inner">
+        <h3>R$ 10.00</h3>
+        <p>Total de Créditos</p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-bank"></i>
+      </div>
+    </div>
+  </div>
+</section>
+-->
